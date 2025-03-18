@@ -24,7 +24,7 @@ This project demonstrates how to perform multi-class image classification on the
 ## Getting Started
 **Clone the Repository:** <br/>
 git clone https://github.com/MadushanR/AI-Image-Classification.git <br/>
-cd cifar10-transfer-learning 
+cd AI-Image-Classification
 
 **(Optional)** **Edit** requirements.txt if you want to pin specific versions or add new dependencies.
 
@@ -36,7 +36,7 @@ docker run --rm -it cifar10-tf:latest <br/>
 
 The script will start training. By default, it runs for 5 epochs with a batch size of 32. 
 
-**Adjust Hyperparameters (optional):**
+**Adjust Hyperparameters (optional):** <br/>
 docker run --rm -it \
     -e EPOCHS=10 \
     -e BATCH_SIZE=64 \
