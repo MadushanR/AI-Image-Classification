@@ -4,7 +4,7 @@
 This project demonstrates how to perform multi-class image classification on the CIFAR-10 dataset using a pretrained MobileNetV2 model (transfer learning) in TensorFlow. The entire training process is containerized with Docker for easy reproducibility and deployment.
 
 ## Project Overview
-**Objective**: Classify images from 10 distinct classes in the CIFAR-10 dataset (e.g., airplanes, cars, birds, cats, dogs, etc.)< br / >
+**Objective**: Classify images from 10 distinct classes in the CIFAR-10 dataset (e.g., airplanes, cars, birds, cats, dogs, etc.) <br/>
 **Method**: Utilize a pretrained MobileNetV2 as the base model, freezing its layers and adding custom classification layers on top.
 **Benefit**: Transfer learning significantly reduces training time and improves accuracy compared to training from scratch.
 
