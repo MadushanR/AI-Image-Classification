@@ -23,27 +23,27 @@ This project demonstrates how to perform multi-class image classification on the
 
 ## Getting Started
 **Clone the Repository:** <br/>
-git clone https://github.com/MadushanR/AI-Image-Classification.git <br/>
-cd AI-Image-Classification
+- git clone https://github.com/MadushanR/AI-Image-Classification.git <br/>
+- cd AI-Image-Classification
 
 **(Optional)** **Edit** requirements.txt if you want to pin specific versions or add new dependencies.
 
 **Build the Docker Image:** <br/>
-docker build -t cifar10-tf:latest .
+- docker build -t cifar10-tf:latest .
 
 **Run the Container:** <br/>
-docker run --rm -it cifar10-tf:latest <br/>
+- docker run --rm -it cifar10-tf:latest <br/>
 
 The script will start training. By default, it runs for 5 epochs with a batch size of 32. 
 
 **Adjust Hyperparameters (optional):** <br/>
-docker run --rm -it \ -e EPOCHS=10 \ -e BATCH_SIZE=64 \ cifar10-tf:latest
+- docker run --rm -it \ -e EPOCHS=10 \ -e BATCH_SIZE=64 \ cifar10-tf:latest
     
 ## Usage
 **Training:** The container automatically trains the model and outputs logs (epoch-by-epoch accuracy and loss). <br/>
 **Saving the Model**: By default, the trained model is saved in /app/saved_model inside the container. <br/>
 **Persisting Model to Host:** Mount a volume to save it locally: <br/>
-docker run --rm -it \ -v $(pwd)/saved_model:/app/saved_model \ cifar10-tf:latest <br/>
+- docker run --rm -it \ -v $(pwd)/saved_model:/app/saved_model \ cifar10-tf:latest <br/>
 
 After training, check your local saved_model/ folder for the exported model.
 
