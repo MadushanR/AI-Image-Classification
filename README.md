@@ -5,36 +5,36 @@ This project demonstrates how to perform multi-class image classification on the
 
 ## Project Overview
 **Objective**: Classify images from 10 distinct classes in the CIFAR-10 dataset (e.g., airplanes, cars, birds, cats, dogs, etc.) <br/>
-**Method**: Utilize a pretrained MobileNetV2 as the base model, freezing its layers and adding custom classification layers on top.
-**Benefit**: Transfer learning significantly reduces training time and improves accuracy compared to training from scratch.
+**Method**: Utilize a pretrained MobileNetV2 as the base model, freezing its layers and adding custom classification layers on top. <br/>
+**Benefit**: Transfer learning significantly reduces training time and improves accuracy compared to training from scratch. <br/>
 
 ## Features
-**Transfer Learning**: Speeds up training by leveraging pretrained ImageNet weights.
-**Dockerized**: The entire training pipeline runs in a container, ensuring environment consistency.
-**Flexible** **Hyperparameters**: Environment variables (EPOCHS, BATCH_SIZE) let you easily tweak training settings without editing code.
-**Automatic** **Splits**: The dataset is divided into training, validation, and test sets with minimal manual setup.
-**Model** **Saving**: Saves the trained model for inference or future fine-tuning.
+**Transfer Learning**: Speeds up training by leveraging pretrained ImageNet weights. <br/> 
+**Dockerized**: The entire training pipeline runs in a container, ensuring environment consistency. <br/>
+**Flexible** **Hyperparameters**: Environment variables (EPOCHS, BATCH_SIZE) let you easily tweak training settings without editing code. <br/>
+**Automatic** **Splits**: The dataset is divided into training, validation, and test sets with minimal manual setup. <br/>
+**Model** **Saving**: Saves the trained model for inference or future fine-tuning. <br/>
 
 ## Tech Stack
-**Language**: Python 3.x
-**Framework**: TensorFlow 2.x (Keras)
-**Containerization**: Docker
-**Dataset**: CIFAR-10 (loaded from tf.keras.datasets)
+**Language**: Python 3.x <br/>
+**Framework**: TensorFlow 2.x (Keras) <br/>
+**Containerization**: Docker <br/>
+**Dataset**: CIFAR-10 (loaded from tf.keras.datasets) <br/>
 
 ## Getting Started
-**Clone the Repository:**
-git clone https://github.com/MadushanR/AI-Image-Classification.git
-cd cifar10-transfer-learning
+**Clone the Repository:** <br/>
+git clone https://github.com/MadushanR/AI-Image-Classification.git <br/>
+cd cifar10-transfer-learning 
 
 **(Optional)** **Edit** requirements.txt if you want to pin specific versions or add new dependencies.
 
-**Build the Docker Image:**
+**Build the Docker Image:** <br/>
 docker build -t cifar10-tf:latest .
 
-**Run the Container:**
-docker run --rm -it cifar10-tf:latest
+**Run the Container:** <br/>
+docker run --rm -it cifar10-tf:latest <br/>
 
-The script will start training. By default, it runs for 5 epochs with a batch size of 32.
+The script will start training. By default, it runs for 5 epochs with a batch size of 32. 
 
 **Adjust Hyperparameters (optional):**
 docker run --rm -it \
