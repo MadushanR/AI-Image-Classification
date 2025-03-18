@@ -44,6 +44,7 @@ docker run --rm -it \ -e EPOCHS=10 \ -e BATCH_SIZE=64 \ cifar10-tf:latest
 **Saving the Model**: By default, the trained model is saved in /app/saved_model inside the container. <br/>
 **Persisting Model to Host:** Mount a volume to save it locally: <br/>
 docker run --rm -it \ -v $(pwd)/saved_model:/app/saved_model \ cifar10-tf:latest <br/>
+
 After training, check your local saved_model/ folder for the exported model.
 
 ## Future Enhancements
